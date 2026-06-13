@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uplift — Installer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: #fff; padding: 32px 24px;
+    background: linear-gradient(180deg, #0a1033 0%, #142459 40%, #386dba 80%, #66a6eb 100%);
+    overflow: hidden; position: relative;
+  }
+  .stars { position: fixed; inset: 0; z-index: 0; }
+  .star { position: absolute; background: #fff; border-radius: 50%; opacity: .6; }
+  .card { position: relative; z-index: 1; max-width: 380px; width: 100%; }
+  .icon {
+    width: 120px; height: 120px; border-radius: 27px; margin: 0 auto 24px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.15);
+  }
+  h1 {
+    font-size: 44px; font-weight: 900; letter-spacing: -1px;
+    background: linear-gradient(180deg,#fff,#aee6ff); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; text-shadow: 0 2px 14px rgba(120,200,255,.3);
+  }
+  .sub { font-size: 16px; font-weight: 700; letter-spacing: 6px; color: rgba(255,255,255,.7); margin-top: 4px; }
+  .ver { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 14px; }
+  .btn {
+    display: block; margin: 32px auto 0; padding: 18px 24px; width: 100%;
+    font-size: 19px; font-weight: 800; color: #fff; text-decoration: none;
+    border-radius: 100px; border: none;
+    background: linear-gradient(90deg,#9438d1,#d95aa6);
+    box-shadow: 0 10px 30px rgba(148,56,209,.45);
+  }
+  .btn:active { transform: scale(.97); }
+  .steps {
+    margin-top: 28px; text-align: left; font-size: 14px; line-height: 1.7;
+    color: rgba(255,255,255,.8); background: rgba(255,255,255,.08);
+    border-radius: 16px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.1);
+  }
+  .steps b { color: #fff; }
+  .steps ol { margin-left: 18px; }
+</style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  <div class="card">
+    <img class="icon" src="icon.png" alt="Uplift">
+    <h1>SKY TOWER</h1>
+    <div class="sub">BUILDER</div>
+    <div class="ver">Mode Arcade · version 1.0</div>
+    <a class="btn" href="itms-services://?action=download-manifest&url=https://wayheme69.github.io/uplift-ota/manifest.plist">📲 Installer Uplift</a>
+    <div class="steps">
+      <ol>
+        <li>Ouvre ce lien dans <b>Safari</b> (pas Chrome).</li>
+        <li>Touche <b>Installer Uplift</b> puis <b>Installer</b>.</li>
+        <li>Va dans <b>Réglages → Général → VPN et gestion de l'appareil</b> et fais confiance à <b>DIGITAL APP LLC</b>.</li>
+        <li>Lance le jeu depuis l'écran d'accueil 🏗️</li>
+      </ol>
+    </div>
+  </div>
+  <script>
+    const s = document.getElementById('stars');
+    for (let i = 0; i < 70; i++) {
+      const d = document.createElement('div');
+      d.className = 'star';
+      const sz = Math.random() * 2.5 + 0.5;
+      d.style.width = d.style.height = sz + 'px';
+      d.style.left = Math.random() * 100 + '%';
+      d.style.top = Math.random() * 60 + '%';
+      d.style.opacity = Math.random() * 0.6 + 0.2;
+      s.appendChild(d);
+    }
+  </script>
+</body>
+</html>
